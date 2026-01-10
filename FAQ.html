@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TalentFirm | Candidate FAQ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="nav__brand">TalentFirm</div>
+    <button class="nav__toggle" aria-label="Toggle navigation">☰</button>
+    <nav class="nav__links">
+      <a href="index.html#services">Services</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#approach">Approach</a>
+      <a href="index.html#team">Team</a>
+      <a href="index.html#testimonials">Testimonials</a>
+      <a href="index.html#jobs">Open Roles</a>
+      <a href="FAQ.html">FAQ</a>
+      <button id="themeToggle" class="nav__theme" aria-label="Switch theme">Light</button>
+      <a class="btn btn--ghost" href="index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="faq">
+    <div class="faq__header">
+      <p class="eyebrow">Candidate Resources</p>
+      <h2>Frequently Asked Questions</h2>
+      <p class="section__lede">Have questions? We're here to help. Expand a question to view the answer.</p>
+    </div>
+
+    <div class="faq__list" id="faqList">
+      <div class="faq-item">
+        <button class="faq-q">What is your application process? <span>Expand</span></button>
+        <div class="faq-a"><p>We begin with a discovery call, followed by a structured assessment aligned to role competencies. Shortlisted candidates meet hiring stakeholders, and we support offer and onboarding.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">How long does it take to hear back? <span>Expand</span></button>
+        <div class="faq-a"><p>Typical timelines range from 7–14 days for initial feedback after submission, depending on role seniority and stakeholder availability.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Do you offer remote roles? <span>Expand</span></button>
+        <div class="faq-a"><p>Yes. Many of our partner companies offer remote or hybrid options. Role flexibility is listed in each posting.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">How should I prepare for interviews? <span>Expand</span></button>
+        <div class="faq-a"><p>We recommend preparing STAR stories, quantifying impact, and reviewing role-specific leadership competencies. Your consultant will share tailored guidance.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What salary ranges can I expect? <span>Expand</span></button>
+        <div class="faq-a"><p>Ranges vary by market and role. We publish indicative ranges on featured opportunities and discuss expectations early to ensure alignment.</p></div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__brand">TalentFirm</div>
+    <div class="footer__cols">
+      <div>
+        <h4>Services</h4>
+        <a href="index.html#services">Executive Search</a>
+        <a href="index.html#services">Talent Mapping</a>
+        <a href="index.html#services">Leadership Advisory</a>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="index.html#about">About Us</a>
+        <a href="index.html#team">Our Team</a>
+        <a href="index.html#contact">Careers</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <a href="index.html#jobs">Open Positions</a>
+        <a href="#">Blog</a>
+        <a href="#">Case Studies</a>
+        <a href="FAQ.html">FAQ</a>
+      </div>
+    </div>
+    <div class="footer__meta">
+      <span>© 2026 TalentFirm. All rights reserved.</span>
+      <div class="footer__links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // Accordion: allow only one open at a time
+    const items = document.querySelectorAll('.faq-item');
+    items.forEach(item => {
+      const q = item.querySelector('.faq-q');
+      q.addEventListener('click', () => {
+        items.forEach(i => { if (i !== item) i.classList.remove('open'); });
+        item.classList.add('open');
+      });
+    });
+  </script>
+</body>
+</html>
